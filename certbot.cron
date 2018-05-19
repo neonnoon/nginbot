@@ -1,0 +1,1 @@
+17 05,35 * * * root certbot renew --renew-hook "/etc/init.d/nginx reload" > /dev/stdout

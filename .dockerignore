@@ -1,0 +1,5 @@
+.git
+.gitignore
+bitbucket-pipelines.yml
+Dockerfile
+README.md

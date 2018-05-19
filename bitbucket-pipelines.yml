@@ -1,0 +1,13 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          services:
+            - docker
+          script:
+            - docker login --username $REGISTRY_USERNAME --password $REGISTRY_PASSWORD
+            - |
+                for TAG in `echo $NGINX_TAGS | sed 's/,/ /g'`; do
+                    docker build --build-arg NGINX_TAG=$TAG -t $IMAGE_NAME:$TAG .
+                    docker push $IMAGE_NAME
+                done
