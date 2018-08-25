@@ -6,7 +6,7 @@ WORKDIR /work
 VOLUME ["/etc/letsencrypt"]
 
 RUN apt-get update \
-    && apt-get install -y certbot curl gnupg \
+    && apt-get install -y certbot curl gnupg cron \
     && curl -sL https://deb.nodesource.com/setup_10.x | bash \
     && apt-get install -y nodejs
 
