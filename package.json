@@ -2,6 +2,6 @@
   "name": "nginx-certbot",
   "dependencies": {
     "minimist": "^1.2.0",
-    "nginx-conf": "^1.4.0"
+    "nginx-conf": "^1.5.0"
   }
 }
