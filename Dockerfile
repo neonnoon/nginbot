@@ -19,6 +19,8 @@ COPY package.json /work
 RUN npm install
 
 COPY certbot.cron /etc/cron.d/certbot
+RUN crontab /etc/cron.d/certbot
+
 COPY . /work
 
 ENV CERTBOT_STAGING "false"
