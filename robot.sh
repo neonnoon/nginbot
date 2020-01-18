@@ -45,7 +45,7 @@ function create_selfsigned_cert() {
     local TMP_CERT_FULL_DIR="$TMP_CERT_DIR/$MAIN"
     [ -d "$TMP_CERT_FULL_DIR" ] || mkdir -p $TMP_CERT_FULL_DIR
 
-    openssl req -x509 -newkey rsa:1024 -nodes -days 1 \
+    openssl req -x509 -newkey rsa:2048 -nodes -days 1 \
         -keyout "$TMP_CERT_FULL_DIR/$KEY_FILE" \
         -out "$TMP_CERT_FULL_DIR/$CERT_FILE" \
         -subj "/CN=$MAIN" \
